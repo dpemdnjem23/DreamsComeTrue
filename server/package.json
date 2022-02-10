@@ -11,13 +11,17 @@
   "license": "ISC",
   "dependencies": {
     "16": "^0.0.2",
+    "axios": "^0.25.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.0",
     "express": "^4.17.2",
     "mysql2": "^2.3.3",
-    "node": "^17.4.0",
+    "node": "^16.0.0",
     "sequelize": "^6.16.0",
     "sequelize-cli": "^6.4.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
-  }
+  },
+  "proxy": "http://example.com:3000"
 }

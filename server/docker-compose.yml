@@ -1,12 +1,13 @@
 version: '3' # docker compose 버전 
 services:
-  local-db:
+  db:
     image: library/mysql:5.7
-    container_name: subway_local # 컨테이너 이름
+    container_name: dreams # 컨테이너 이름
     restart: always
     ports:
       - 3307:3306 # 로컬의 13306 포트를 컨테이너의 3306포트로 연결
     environment:
+      MYSQL_DATABASE: dreams
       MYSQL_USER: air
       MYSQL_PASSWORD: dkskqkek
       MYSQL_ROOT_PASSWORD: dkskqkek
