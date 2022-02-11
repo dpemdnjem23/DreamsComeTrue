@@ -14,6 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   User.init({
+    // index:DataTypes.BIGINT.UNSIGNED,
     userName: DataTypes.CHAR(64),
     userDesc: DataTypes.TEXT,
     hasCat: DataTypes.BOOLEAN

@@ -1,5 +1,5 @@
 const axios = require("axios");
-const User = require("../models/user");
+
 
 module.exports = {
   delayControl: async (req, res) => {
@@ -8,7 +8,7 @@ module.exports = {
         Accept: "application/json",
       },
     }).then(data =>{
-        return res.status(200).send(data)
+        return res.status(200).send('5초뒤 반응')
     })
   },
 };
