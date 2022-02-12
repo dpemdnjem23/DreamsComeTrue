@@ -35,5 +35,12 @@ console.log(id)
       })
 
 
-  }
+  },
+  userHasCat: async(req,res) =>{
+
+  },
+   userDelete: async(req,res) =>{
+     
+   }
+
 };
