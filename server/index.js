@@ -15,7 +15,19 @@ app.use(cookieParser())
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
-app.get('http://hc.check/_ah/health', function (req, res) {
+app.use(function(req,res,next){
+
+  res.header('Access-Control-Allow-Origin','http://localhost:8080','http://example.com')
+  res.header('Access-Control-Allow-Headers','origin, X-Requested-With')
+  res.header('Access-Control-Allow-Mehods','POST','GET','OPTIONS','DELETE')
+  res.header('Access-Control-max-Age', 86400)
+
+next()
+  
+})
+
+
+app.get('/http://hc.check/_ah/health', function (req, res) {
     return res.status(200).send('OK');
   });
 
