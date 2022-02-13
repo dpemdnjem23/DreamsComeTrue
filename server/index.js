@@ -15,6 +15,16 @@ app.use(cookieParser())
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
+app.get('/',(req,res)=>{
+
+  res.cookie('name','tobi',{
+    maxAge:60*60*1000,
+    httpOnly:true,
+     
+    })
+})
+
+
 app.use(function(req,res,next){
 
   res.header('Access-Control-Allow-Origin','http://localhost:8080','http://example.com')
